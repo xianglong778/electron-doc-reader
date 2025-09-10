@@ -1,5 +1,5 @@
 {
-	"name": "electron-markdown",
+	"name": "electron-doc-reader",
 	"version": "2.0.0",
 	"private": true,
 	"author": "bugu",
@@ -27,7 +27,7 @@
 		"@vitejs/plugin-vue": "^5.0.5",
 		"electron": "^32.1.2",
 		"electron-builder": "^25.0.5",
-		"vite": "6.3.4"
+		"vite": "5.0.0"
 	},
 	"build": {
 		"appId": "com.bugu.files",
