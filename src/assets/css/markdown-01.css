@@ -1,0 +1,306 @@
+.markdown-content {
+    --XXXYYY: #ffffff;
+}
+
+.markdown-content {
+    background-color: var(--XXXYYY);
+
+    .markdown-item-box {
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .markdown-item-box:nth-child(n+2) {
+        margin-top: 20px;
+    }
+}
+
+.markdown-content {
+
+    /*
+     =========================================================== 用户选择文本
+     */
+
+    .markdown-item-box {
+        ::selection {
+            color: #909399;
+            background: #e8e9fa;
+        }
+    }
+
+
+    /*
+     =========================================================== 引言: blockquote
+     */
+
+    .markdown-item-box {
+        > blockquote {
+            display: block;
+            background-color: rgba(66, 185, 131, .1);
+            border-left: 6px solid #42b983;
+            padding: 20px;
+            border-radius: 5px;
+
+            p {
+                font-size: 24px;
+                line-height: 36px;
+                color: #909399;
+                font-weight: normal;
+            }
+
+            blockquote {
+                margin-top: 20px;
+                background-color: rgba(66, 185, 131, .1);
+                padding: 20px;
+                border-left: 6px solid #42b983;
+                border-radius: 5px;
+            }
+        }
+    }
+
+
+    /*
+     =========================================================== 代码块: pre
+     */
+
+    .markdown-item-box {
+        pre {
+            position: relative;
+            background-color: #f8f8f8;
+
+            code {
+                display: block;
+                font-size: 24px;
+                line-height: 36px;
+                font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+                white-space: pre-wrap; /* 或 pre-line，取决于你的需求 */
+                word-break: break-all; /* 在任意字符处断行 */
+                padding: 40px;
+                color: #42b983;
+            }
+
+            .button-copy-code {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 80px;
+                height: 30px;
+                font-size: 16px;
+                line-height: 16px;
+                border: none;
+                padding: 0 10px;
+                cursor: pointer;
+                transition: all .5s;
+                border-radius: 5px;
+            }
+
+            .button-copy-code:hover {
+                background-color: #0c9a9a;
+            }
+
+            .button-run-code {
+                position: absolute;
+                top: 0;
+                right: 80px;
+                width: 30px;
+                height: 30px;
+                background-color: transparent;
+                text-align: center;
+                line-height: 30px;
+                font-size: 20px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .button-run-code:hover {
+                background-color: #0c9a9a;
+            }
+        }
+    }
+
+
+    /*
+     =========================================================== 图片: img
+     */
+
+    .markdown-item-box {
+        > img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+
+    /*
+     =========================================================== 标题: h1,h2,h3,h4,h5,h6
+     */
+
+    .markdown-item-box {
+        > h1,
+        > h2,
+        > h3,
+        > h4,
+        > h5,
+        > h6 {
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        > h1 {
+            font-size: 48px;
+            text-wrap: auto;
+        }
+
+        > h2 {
+            font-size: 42px;
+            text-wrap: auto;
+        }
+
+        > h3 {
+            font-size: 36px;
+            text-wrap: auto;
+        }
+
+        > h4 {
+            font-size: 30px;
+            text-wrap: auto;
+        }
+
+        > h5 {
+            font-size: 24px;
+            text-wrap: auto;
+        }
+
+        > h6 {
+            font-size: 18px;
+            text-wrap: auto;
+        }
+    }
+
+
+    /*
+     =========================================================== 文本段落: p
+     */
+
+    .markdown-item-box {
+        > p {
+            font-size: 24px;
+            color: #909399;
+            font-weight: normal;
+
+            strong {
+                font-size: 24px;
+                color: #000000;
+                font-weight: bold;
+            }
+
+            em {
+                font-size: 24px;
+                color: #000000;
+                font-weight: bold;
+            }
+
+            code {
+                font-size: 24px;
+                color: #ff9900;
+                font-weight: normal;
+            }
+        }
+    }
+
+
+    /*
+     =========================================================== 分割线: hr
+     */
+
+    .markdown-item-box {
+        hr {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #e8e9fa;
+            border: 0;
+        }
+    }
+
+
+    /*
+     =========================================================== 链接: a
+     */
+
+    .markdown-item-box {
+        a {
+            font-size: 24px;
+            color: #ff9900;
+            font-weight: normal;
+            border-bottom: 3px solid #ff9900;
+        }
+    }
+
+
+    /*
+     =========================================================== 表格: table
+     */
+
+    .markdown-item-box {
+        table {
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+
+            thead tr th {
+                background-color: #e8e9fa;
+                font-size: 24px;
+                font-weight: bold;
+                text-align: left;
+                padding-left: 20px;
+                line-height: 48px;
+                border: 2px solid #909399;
+            }
+
+            tbody tr {
+                background-color: #f8f8f8;
+            }
+
+            tbody tr:hover {
+                background-color: rgba(66, 185, 131, .1);
+            }
+
+            tbody tr td {
+                font-size: 24px;
+                font-weight: normal;
+                text-align: left;
+                padding-left: 20px;
+                line-height: 48px;
+                border: 2px solid #909399;
+            }
+        }
+    }
+
+
+    /*
+     =========================================================== 列表: ul-li
+     */
+
+    .markdown-item-box {
+        ul,
+        ol {
+            width: 100%;
+            height: auto;
+
+            li {
+                position: relative;
+                margin-left: 30px;
+                list-style: disc;
+                font-size: 20px;
+                line-height: 36px;
+                color: #909399;
+                font-weight: normal;
+            }
+        }
+    }
+}

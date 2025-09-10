@@ -1,0 +1,51 @@
+{
+	"name": "electron-markdown",
+	"version": "2.0.0",
+	"private": true,
+	"author": "bugu",
+	"description": "文档阅读器（md、txt、、、）",
+	"main": "src-electron/main.js",
+	"license": "MIT",
+	"scripts": {
+		"1dev": "vite",
+		"2dev": "electron .",
+		"1build": "vite build",
+		"2build": "electron-builder",
+		"3build": "vite build && electron-builder"
+	},
+	"dependencies": {
+		"editor": "^1.0.0",
+		"element-plus": "^2.8.4",
+		"less": "^4.2.0",
+		"marked": "^14.1.2",
+		"mitt": "^3.0.1",
+		"sqlite3": "^5.1.7",
+		"vue": "^3.4.29",
+		"vue-router": "^4.4.5"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^5.0.5",
+		"electron": "^32.1.2",
+		"electron-builder": "^25.0.5",
+		"vite": "6.3.4"
+	},
+	"build": {
+		"appId": "com.bugu.files",
+		"productName": "Bugu-File",
+		"copyright": "Copyright © 2024 bugu",
+		"directories": {
+			"output": "App"
+		},
+		"win": {
+			"icon": "build/icon.ico",
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64"
+					]
+				}
+			]
+		}
+	}
+}

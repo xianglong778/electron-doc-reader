@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'YuYangT_W01_W01';
+    src: url("TsangerYuYangT_W01_W01.ttf");
+}
+
+@font-face {
+    font-family: 'YuYangT_W05_W05';
+    src: url("TsangerYuYangT_W05_W05.ttf");
+}
+
+@font-face {
+    font-family: 'YuYangT_W04_W04';
+    src: url("TsangerYuYangT_W04_W04.ttf");
+}
+
+* {
+    font-family: YuYangT_W04_W04, '楷体', serif;
+}
